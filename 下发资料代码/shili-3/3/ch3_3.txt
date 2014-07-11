@@ -1,0 +1,8 @@
+LinkStack Puch_LinkStack(LinkStack top,datatype x)
+{	StackNode *s;
+	s=(StackNode*)malloc(sizeof(StackNode));
+	s->data=x;
+	s->next=top;
+	top=s;
+	return top;
+}

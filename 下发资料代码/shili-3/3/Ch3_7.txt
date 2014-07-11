@@ -1,0 +1,19 @@
+typedef struct
+{	datatype data[MAXSIZE];
+	int front,rear;
+	int num;
+}C_SeQueue,*LinkQueue;
+int in_SeQueue(LinkQueue q,datatype x)
+{  	if(q->num)==MAXSIZE)
+      	{	printf("overflow");
+		return -1;
+	}
+   	else
+      	{   	q->rear=(q->rear+1) % MAXSIZE;
+          		q->data[q->rear]=x;
+		q->num++;
+		return 1;
+      	}
+}
+
+   

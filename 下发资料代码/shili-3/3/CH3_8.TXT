@@ -1,0 +1,17 @@
+typedef struct
+{	datatype data[MAXSIZE];
+	int front,rear;
+	int num;
+}C_SeQueue,*LinkQueue;
+int out_SeQueue(LinkQueue q,datatype x)
+{  	if(q->num)==0)
+		return -1;
+	else
+      	{   	q->front=(q->front+1) % MAXSIZE;
+          		x=q->data[q->front];
+		q->num--;
+		return 1;
+      	}
+}
+
+   

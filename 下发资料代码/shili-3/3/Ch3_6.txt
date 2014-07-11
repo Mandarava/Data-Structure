@@ -1,0 +1,14 @@
+int out_LQueue(LQueue *q,datatype x)
+{  QNode *p;
+   int x;
+   if (Empty_LQueue(q))       return(-1);
+   else
+   {   p=q->front->next;
+       q->front->next=p->next;
+       x=p->data;
+       free(p);
+       if(q->front->next==NULL)
+           q->rear=q->front;
+       return 1;
+    }
+}

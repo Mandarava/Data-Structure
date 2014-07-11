@@ -1,0 +1,10 @@
+int Pop_SeqStack(SeqStack *s)
+{	
+	int x;
+	if (empty_SeqStack(s)) return 0;
+	else 
+	{	x=s->data[s->top];
+		s->top--;
+		return (x);
+	}
+}

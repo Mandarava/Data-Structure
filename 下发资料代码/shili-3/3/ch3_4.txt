@@ -1,0 +1,11 @@
+LinkStack Pop_LinkStack(LinkStack top,datatype *x)
+{	StackNode *p;
+	if (top==NULL) return NULL;
+	else
+	{	*x=top->data;
+		p=top;
+		top=top->next;
+		free(p);
+		return top;
+	}
+}

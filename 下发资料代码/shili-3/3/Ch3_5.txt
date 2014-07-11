@@ -1,0 +1,8 @@
+void in_LQueue(LQueue *q,datatype x)
+{   QNode *p;
+    p=(QNode *)malloc(sizeof(QNode));
+    p->data=x;
+    p->next=NULL;
+    q->rear->next=p;
+    q->rear=p;
+}

@@ -1,0 +1,8 @@
+int puch_SeqStack(SeqStack *s,datatype x)
+{	if (s->top==MAXSIZE-1) return 0;
+	else
+	{	s->top++;
+		s->data[s->top]=x;
+		return 1;
+	}
+}
