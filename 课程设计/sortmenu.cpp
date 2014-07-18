@@ -20,9 +20,6 @@ void list1()
 			scanf("%d",&i);
 			if (i>=0 && i<=3)
 				break;
-			else
-				printf("ÊäÈë´íÎó£¬");
-				printf("ÇëÑ¡Ôñ0--3:\n");
 		}
 		switch (i)
 		{
