@@ -4,7 +4,7 @@
 #include<stdlib.h> 
 void main()
 {
-	int i;
+	int i,status;
 	while (1)
 	{	
 		system("cls");
@@ -14,12 +14,18 @@ void main()
 		printf("\t3:汉诺塔问题\n");
 		printf("\t0:退出\n");
 		printf("\t请选择0--3:\n");
-		while (1)
-		{
-			scanf("%d",&i);
-			if (i>=0 && i<=3)
-				break;
-		}
+//		while (1)
+//		{
+//			scanf("%d",&i);
+//			if (i>=0 && i<=3)
+//				break;
+//		}
+	while((status=scanf("%d",&i))!=1||(i>3||i<0))
+	{
+		if(status!=1)				//判断是否为字符 
+			scanf("%*s");			//跳至下一个空白符 清除输入缓冲区中的非法输入
+			printf("请输入0-3的数字\n");
+	}
 		switch (i)
 		{
 		case 1:{list2();break;}

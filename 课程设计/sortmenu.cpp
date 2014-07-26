@@ -5,21 +5,22 @@
 #include<stdlib.h> 
 void list1()
 {	
-	int i,flag=1;
+	int i,flag=1,status;
 	while (flag)
 	{
 		system("cls");
-	 L1:printf("\t各种排序\n");
+	 	printf("\t各种排序\n");
 		printf("\t1:直接插入排序\n");
 		printf("\t2:直接选择排序\n");
 		printf("\t3:冒泡排序改进版\n");
 		printf("\t0:退出\n");
 		printf("\t请选择0--3:\n");
-		while (true)
+
+		while((status=scanf("%d",&i))!=1||(i>3||i<0))
 		{
-			scanf("%d",&i);
-			if (i>=0 && i<=3)
-				break;
+			if(status!=1)
+				scanf("%*s");
+			printf("请输入0-3的整数\n");
 		}
 		switch (i)
 		{

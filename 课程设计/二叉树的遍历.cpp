@@ -2,7 +2,7 @@
 #include<malloc.h>
 #include<stdlib.h> 
 #define MaxSize 100
-#define NULL 0
+//#define NULL 0
  typedef char ElemType;
  typedef struct node
  {
